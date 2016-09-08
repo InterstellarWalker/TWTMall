@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/activity_bg"
+    tools:context="com.tianwotian.mytaobao.home.LoginActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/login_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?attr/colorPrimary"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:navigationIcon="@mipmap/activity_back"
+            android:navigationIcon="@mipmap/activity_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/title_activity_login"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@mipmap/bg_input">
+
+        <RelativeLayout
+            android:id="@+id/email_login_account"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textColor="@color/twentyBlack"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:id="@+id/edit_acount"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:textColorHint="@color/hint_color"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_alignBottom="@+id/tv_account"
+                android:layout_toRightOf="@+id/tv_account"
+                android:layout_toEndOf="@+id/tv_account" />
+        </RelativeLayout>
+
+            <RelativeLayout
+            android:id="@+id/email_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="12dp"
+            >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textColor="@color/twentyBlack"
+                android:textSize="16sp"
+                android:id="@+id/tv_password"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:textColorHint="@color/hint_color"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:imeActionId="@+id/login"
+                android:background="@null"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_alignBottom="@+id/tv_password"
+                android:layout_toRightOf="@+id/tv_password"
+                android:layout_toEndOf="@+id/tv_password" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/login_button"
+
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+
+            android:background="@mipmap/button_bg_true"
+            android:text="@string/action_sign_in"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <Button
+            android:id="@+id/forget_pwd_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/forget_password"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/register_atonce_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/register_at_once"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

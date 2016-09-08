@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tianwotian.mytaobaotest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+	    <uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.tianwotian.mytaobao.home.Main_FA"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tianwotian.mytaobao.home.DetailActivity"   android:theme="@style/AppTheme" />
+        <activity android:name="com.tianwotian.mytaobao.home.WareActivity"   android:theme="@style/AppTheme" />
+        <activity android:name="com.tianwotian.mytaobao.home.ShowBigPictrue"    android:theme="@style/AppTheme"/>
+        <activity android:name="com.tianwotian.mytaobao.home.BuynowActivity"    android:theme="@style/AppTheme" />
+        <activity android:name="com.tianwotian.mytaobao.user.User_life"   android:theme="@style/AppTheme" />
+        <activity android:name="com.tianwotian.mytaobao.user.User_opinion"    android:theme="@style/AppTheme"/>
+        <activity android:name="com.tianwotian.mytaobao.user.HelloSensor"   android:theme="@style/AppTheme"/>
+        <!-- 隐藏键盘 -->
+        <!-- 全屏 -->
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <service android:name="com.zdp.aseo.content.AseoZdpUpdateService" />
+		<!--<activity-->
+            <!--android:name="com.iflytek.voiceads.request.IFLYBrowser"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!--<meta-data  android:name="IFLYTEK_APPKEY_AD" android:value="54fe544f"/>-->
+        <activity
+            android:name="com.tianwotian.mytaobao.home.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.tianwotian.mytaobao.home.RegisterActivity"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>
